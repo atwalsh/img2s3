@@ -1,6 +1,5 @@
 from flask import Flask
 
-from img2s3.extensions import db, migrate
 from .blueprints import img2s3_bp
 
 
@@ -19,7 +18,6 @@ def create_app(config=None, app_name=None):
     app = Flask(app_name)
 
     configure_app(app, config)
-    configure_extensions(app)
     configure_blueprints(app)
     return app
 
@@ -33,17 +31,8 @@ def configure_app(app: Flask, config):
     app.config.from_object(config)
 
 
-def configure_extensions(app: Flask):
-    """
-    Initialize flask extensions with init_app.
-    """
-    db.init_app(app)
-    migrate.init_app(app, db)
-
-
 def configure_blueprints(app: Flask):
     """
     Configure blueprints.
     """
     app.register_blueprint(img2s3_bp)
-
