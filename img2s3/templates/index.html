@@ -1,6 +1,30 @@
 {% extends 'base.html' %}
 {% block body %}
-    <div class="container-fluid my-4">
-        <h3>{{ app_name }}</h3>
+    <div class="container my-4">
+        <div class="card">
+            <div class="card-header">
+                img2s3
+            </div>
+            {% if urls %}
+                <div class="card-body">
+                    {% for url in urls %}
+                        <div class="row">
+                            <img src="{{ url }}" class="h-100 w-50">
+                            <p class="w-50">{{ url }}</p>
+                        </div>
+                        <hr>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div class="card-body">
+                <form method="post" enctype=multipart/form-data>
+                    <div class="form-group">
+                        <label>Upload image</label>
+                        <input type="file" class="form-control-file" name="img_file[]" multiple="">
+                        <button class="btn btn-primary mt-5" type="submit">Upload</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 {% endblock %}
