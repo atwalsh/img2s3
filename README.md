@@ -8,5 +8,5 @@ Create a `.env` file in `img2s3/` with the following:
 S3_KEY_ID
 S3_ACCESS_SECRET
 S3_BUCKET
-S3_BUCKET_DIR #optional S3 folder
+S3_BUCKET_DIR # optional S3 folder
 ```
