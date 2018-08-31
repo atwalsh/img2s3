@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pytest = "==3.6.3"
+python-dotenv = "==0.8.2"
+"psycopg2" = "==2.7.5"
+Flask = "==1.0.2"
+Flask-SQLAlchemy = "==2.3.2"
+Flask-Migrate = "==2.2.1"
+Flask-Script = "==2.0.6"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
