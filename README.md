@@ -9,5 +9,5 @@ S3_KEY_ID
 S3_ACCESS_SECRET
 S3_BUCKET
 S3_BUCKET_DIR # optional S3 folder
-PORT # option webserver port
+PORT # optional webserver port
 ```
